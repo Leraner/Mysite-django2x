@@ -19,12 +19,12 @@ def test_title(browser):
     inputbox = browser.find_element_by_id('rrrrrr')
     inputbox.send_keys('Тест')
 
-    assert header_text == 'Murrengan'
-    assert browser.title == 'Murrengan'
+    assert header_text == 'Project'
+    assert browser.title == 'Project'
 
 
 # def test_home_visit():
-#     found = resolve('/home')
+#     found = resolve('/home/')
 #     assert found.func == home_visit
 #
 #
