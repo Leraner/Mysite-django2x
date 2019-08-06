@@ -9,16 +9,17 @@
     <meta charset="UTF-8">
     <title>Project</title>
 </head>
+
+
 <body>
 
-<div class="container text-center mt-4 mb-4">
-<h1>Project</h1>
-</div>
-
-
 <div class="container">
-    <input id="rrrrrr" class="form-control" placeholder="Что нужно сделать?">
+    <a href="{% url 'home' %}" class="btn btn-outline-primary mt-3">Home</a>      <a href="{% url 'about' %}" class="btn btn-outline-primary mt-3">About</a>
 </div>
+
+
+{% block content %}
+{% endblock content %}
 
 
 </body>

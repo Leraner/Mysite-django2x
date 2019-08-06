@@ -1,26 +1,26 @@
-import pytest
-from selenium import webdriver
 from django.urls import resolve
 from django.test import TestCase
-from app.blogengine.home.views import home_visit
+from django.test import SimpleTestCase
 
 
-@pytest.fixture
-def browser():
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
+# def test_title(browser):
+#
+#     browser.get('http://127.0.0.1:8000')
+#     header_text = browser.find_element_by_tag_name('h1').text
+#
+#     assert header_text == 'Project'
+#     assert browser.title == 'Project'
 
 
-def test_title(browser):
+class SimpleTests(SimpleTestCase):
 
-    browser.get('http://127.0.0.1:8000/home/')
-    header_text = browser.find_element_by_tag_name('h1').text
-    inputbox = browser.find_element_by_id('rrrrrr')
-    inputbox.send_keys('Тест')
+    def test_home_page_status_code(self):
+        response = self.client.get('')
+        assert response.status_code == 200
 
-    assert header_text == 'Project'
-    assert browser.title == 'Project'
+    def test_about_page_status_code(self):
+        response = self.client.get('/about/')
+        assert response.status_code == 200
 
 
 # def test_home_visit():
