@@ -5,10 +5,20 @@
 <h1>Project</h1>
 </div>
 
+
 <div class="container">
     <form method="POST">
         <input id="id_new_item" name="item_text" class="form-control" placeholder="Что нужно сделать?">
     </form>
+</div>
+
+<!--posts-->
+<div class="container mt-4">
+    <ul>
+        {% for post in all_posts_list %}
+        <td>{{ post }}</td>
+        {% endfor %}
+    </ul>
 </div>
 
 {% endblock content %}
