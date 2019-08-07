@@ -11,7 +11,6 @@ from django.urls import reverse
 #
 #     browser.get('http://127.0.0.1:8000')
 #     header_text = browser.find_element_by_tag_name('h1').text
-#
 #     assert header_text == 'Project'
 #     assert browser.title == 'Project'
 
