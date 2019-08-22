@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Tell me about you</h1>
+
+<form action="" method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input class="btn btn-info" type="submit" value="Save" />
+
+</form>
+
+{% endblock content %}
