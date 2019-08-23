@@ -40,3 +40,13 @@ class BlogTests(TestCase):
     #     assert response.status_code == 200
     #     assert no_response.status_code == 404
     #     assert 'Nice body content' in response
+
+    # def test_post_create_view(self):
+    #     response = self.client.post(reverse('post_new'), {
+    #         'title': 'New title',
+    #         'body': 'New text',
+    #         'author': self.user
+    #     })
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertContains(response, 'New title')
+    #     self.assertContains(response, 'New text')

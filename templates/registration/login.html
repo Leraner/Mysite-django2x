@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-
 {% block content %}
 
-<div class="container met-5">
+<div class="container">
     <div class="col-6 text-center mx-auto">
-        <h1>Edit Post</h1>
-        <form action="" method="post">
+        <h2>Registartion</h2>
+        <form method="post">
 
             {% csrf_token %}
 
             {{ form|crispy }}
 
-            <input class="btn btn-info" type="submit" value="Update">
+            <button class="btn btn-info" type="submit">Log In</button>
         </form>
     </div>
 </div>
+
 
 {% endblock content %}
