@@ -7,4 +7,9 @@
     <p>{{ danila.body }}</p>
 </div>
 
+
+<a class="btn btn-success" href="{% url 'post_edit' danila.pk %}">Edit Post</a>
+<a class="btn btn-danger" href="{% url 'post_delete' danila.pk %}">Delete Post</a>
+
 {% endblock content %}
+
