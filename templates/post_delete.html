@@ -12,6 +12,7 @@
 
             <p>Are you sure you want to delete "{{ object.title }}"?</p>
 
+            <a class="btn btn-success" href="{% url 'post_detail' object.pk %}">Return</a>
             <input class="btn btn-danger" type="submit" value="Delete" />
 
         </form>
