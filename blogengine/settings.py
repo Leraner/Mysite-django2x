@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'blog.apps.BlogConfig',
     'crispy_forms',
+    'users.apps.UsersConfig',  # create custom user
     'accounts.apps.AccountsConfig',
 ]
 
@@ -107,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -127,3 +128,4 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+AUTH_USER_MODEL = 'users.CustomUser'
